@@ -14,7 +14,7 @@ def net():
             nalog = (brutto - (500 - 0.55556*(brutto - 1200)))*0.236
             netto = (500 - 0.55556*(brutto - 1200) + (brutto - (500 - 0.55556*(brutto - 1200)))*0.236)
             budzet += netto
-            print('Сумма подоходного налога:',round(((brutto - 540)*0.20),2),'\nНакопительный пенсионный фонд:',round(((brutto - 540)*0.02),2),'\nНалог по безработице:',round(((brutto - 540)*0.016),2),'\nи бюджет равен с этого человека: ',netto)
+            print('Сумма подоходного налога:',round(brutto - (500 - 0.55556*(brutto - 1200)*0.20),2),'\nНакопительный пенсионный фонд:',round(brutto - (500 - 0.55556*(brutto - 1200)*0.02),2),'\nНалог по безработице:',round(brutto - (500 - 0.55556*(brutto - 1200)*0.016),2),'\nи бюджет равен с этого человека: ',netto)
         else:
             nalog = brutto*0.266
             netto = brutto - brutto*0.266
@@ -23,7 +23,7 @@ def net():
     else:
         budzet += brutto
         print('При минималке или ниже налог не берётся и бюджет равен: ',brutto)
-def pizduki():
+def deti():
     global child,budzet
     child = int(input('Введите кол-во детей в семье: '))
     if child <=2:
@@ -36,5 +36,5 @@ i = int(input('Сколько взрослых с зп в семье?: '))
 for i in range(i):
     net()
     print('Бюджет с зарплат:',budzet)
-pizduki()
+deti()
 print('Итоговый бюджет за месяц:',budzet,',а снято налогами:',round(nalog,2),'\nИтоговый бюджет за год:',budzet*12,'\nИтоговая сумма налогов за год:',nalog*12)
