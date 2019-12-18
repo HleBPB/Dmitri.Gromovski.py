@@ -52,7 +52,22 @@ for i in range(n):
 for row in a:
     print(' '.join([str(elem) for elem in row]))#Оформление в таблицу
 ######666666
-
+def  swap_columns(a, i, j): # ТЗ
+    for m in range(len(a)):
+        for n in range(len(a[m])): #пробегаем по всем значениям меняем значения местами
+            if a[m][n] == i:
+                a[m][n]= j
+            elif a[m][n] ==j:
+                a[m][n]=i
+    return a
+a = []# создаём нужные переменные
+n = int(input())
+for i in range(n):
+    a.append([int(j) for j in input().split()])#заполняем массив
+print(a)
+i =int(input())#выбираем какие значения поменять
+j =int(input())
+swap_columns(a,i,j)
 #######7777777
 n = int(input('N: '))
 m = int(input('M: '))
