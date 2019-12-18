@@ -72,8 +72,10 @@ swap_columns(a,i,j)
 n = int(input('N: '))
 m = int(input('M: '))
 a = [[i+(j*m) if j%2==0 else ((j+1)*m-1) - i for i in range(m)] for j in range(n)]
-for row in a:
-    print('  '.join([str(elem) for elem in row]))
+for i in range(m):
+    print()
+    for j in range(n):
+        print('{:3d}'.format(a[i][j]),end = '')
     
     
     
