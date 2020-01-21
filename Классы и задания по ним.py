@@ -20,10 +20,10 @@ class Person():
 
 Vary = Person()
 Mary = Person()
-Vary.name = 'Vary'
+Vary.name = 'Gary'
 Vary.cellPhone = '123'
 Vary.email = 'a@c'
-Mary.name = 'Mary'
+Mary.name = 'Tom'
 Mary.cellPhone = '423'
 Mary.email = 'c@c'
 
@@ -125,7 +125,7 @@ class Monster():
 
 
 mon = Monster()
-mon.name = 'Мария'
+mon.name = 'ManGu'
 mon.health = 20
 mon.deacreaseHealth(10)
 mon.deacreaseHealth(10)
@@ -162,9 +162,9 @@ class Fighter():
 
 
 Mari = Fighter()
-Mari.name = 'Мария'
+Mari.name = 'Guru'
 Vari = Fighter()
-Vari.name = 'Vary'
+Vari.name = 'Gary'
 F = Fighter()
 F.fight(Mari, Vari)
 
